@@ -1,0 +1,31 @@
+name: dig-gpu
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9.21
+  - pip=23.0.1  # - pip<23.1
+  - cudatoolkit=11.3.1
+  - pip:
+      - omegaconf==2.0.6
+      - lmdb=1.6.2
+      - scipy=1.13.1
+      - setuptools==59.5.0
+      - scikit-learn==1.6.0
+      - tensorboard==2.7.0
+      - protobuf==3.20.0
+      - numpy==1.22.4  # - "numpy<2.0"
+      - torch-geometric==1.7.2
+      - tensorboardX==2.4.1
+      - ogb==1.3.2
+      - rdkit-pypi==2021.9.3
+      - "dgl                @ https://data.dgl.ai/wheels/dgl-0.7.2-cp39-cp39-manylinux1_x86_64.whl"
+      # ---------- torch related wheels ---------
+      # ref: https://pytorch.org/get-started/previous-versions/
+      - "torch             @ https://download.pytorch.org/whl/cu111/torch-1.9.1%2Bcu111-cp39-cp39-linux_x86_64.whl#sha256=c0d2cbb51f59c4a915393cf06c08a43391fcde95f21fe68f1d51727eb3b87353"
+      - "torchaudio        @ https://download.pytorch.org/whl/torchaudio-0.9.1-cp39-cp39-linux_x86_64.whl#sha256=bf1af536bd3f4061fa123f8ef5b69f64e81da654b344d7916a8778a34126ce14"
+      - "torchvision       @ https://download.pytorch.org/whl/cu111/torchvision-0.10.1%2Bcu111-cp39-cp39-linux_x86_64.whl#sha256=64e0bf6a783288b78e85efbb740b345ba5e541128ad344ff888f9a06014da40d"
+      - "torch_scatter     @ https://data.pyg.org/whl/torch-1.9.0%2Bcu111/torch_scatter-2.0.9-cp39-cp39-linux_x86_64.whl"
+      - "torch_sparse      @ https://data.pyg.org/whl/torch-1.9.0%2Bcu111/torch_sparse-0.6.12-cp39-cp39-linux_x86_64.whl"
+      - "torch_cluster     @ https://data.pyg.org/whl/torch-1.9.0%2Bcu111/torch_cluster-1.5.9-cp39-cp39-linux_x86_64.whl"
+      - "torch_spline_conv @ https://data.pyg.org/whl/torch-1.9.0%2Bcu111/torch_spline_conv-1.2.1-cp39-cp39-linux_x86_64.whl"
